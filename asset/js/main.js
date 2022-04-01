@@ -10,7 +10,7 @@ var app = new Vue(
                 },
                 {
                     text: 'fare la spesa',
-                    done: false
+                    done: true
                 },
                 {
                     text: 'fare il bucato',
@@ -23,6 +23,14 @@ var app = new Vue(
                 this.toDoArray.push({text: this.newTask, done:false})
                 console.log(this.newTask)
                 console.log(this.toDoArray)
+                this.newTask = ''
+            },
+            doneTrue(elem){
+                if(elem.done == true){
+                    elem.done = false
+                } else{
+                    elem.done = true
+                }
             }
         },
     }
