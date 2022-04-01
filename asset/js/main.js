@@ -19,9 +19,11 @@ var app = new Vue(
             ],
         },
         methods: {
-            newToDo(){
-                this.toDoArray.push({text: this.newTask, done:false})
-                this.newTask = ''
+            newToDo(){                                         //la condizione con includes non funziona.
+                if(this.newTask != '' && this.newTask != ' ' && !this.toDoArray.includes(this.newTask)){
+                    this.toDoArray.push({text: this.newTask, done:false})
+                    this.newTask = ''
+                }
             },
             doneTrue(elem){
                 if(elem.done == true){
