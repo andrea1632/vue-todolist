@@ -4,3 +4,6 @@ ul{
 .line{
     text-decoration: line-through;
 }
+.fa-xmark{
+    cursor: pointer;
+}

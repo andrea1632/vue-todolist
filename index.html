@@ -27,7 +27,7 @@
                             <span @click="doneTrue(x)" v-bind:class="{line: x.done}">
                                 {{x.text}}
                             </span>
-                            <i class="fa-solid fa-xmark"></i>
+                            <i @click="remove(x)" class="fa-solid fa-xmark"></i>
                         </li>
                     </ul>
                 </div>

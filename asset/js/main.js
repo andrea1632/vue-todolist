@@ -21,8 +21,6 @@ var app = new Vue(
         methods: {
             newToDo(){
                 this.toDoArray.push({text: this.newTask, done:false})
-                console.log(this.newTask)
-                console.log(this.toDoArray)
                 this.newTask = ''
             },
             doneTrue(elem){
@@ -31,6 +29,9 @@ var app = new Vue(
                 } else{
                     elem.done = true
                 }
+            },
+            remove(element){
+                this.toDoArray.splice(element, 1)
             }
         },
     }
