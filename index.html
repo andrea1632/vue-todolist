@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center my-5">
-                    <input v-model="newTask" type="text" placeholder="Nuovo Todo">
+                    <input @keyup.enter="newToDo()" v-model="newTask" type="text" placeholder="Nuovo Todo">
                     <button @click="newToDo()">Aggiungi</button>
                 </div>
             </div>
